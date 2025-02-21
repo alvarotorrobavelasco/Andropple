@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #000000; /* Negro */
+    color: #00bfff; /* Azul celeste */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #00bfff; /* Azul celeste */
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #000000; /* Negro */
+    color: #00bfff; /* Azul celeste */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 8px; /* Reducido para ahorrar espacio */
+    background: #00bfff; /* Azul celeste */
+    color: #000000; /* Negro */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Botón ocupa todo el ancho */
+}
+
+form button:hover {
+    background: #007acc; /* Azul más oscuro al pasar el ratón */
+} 
