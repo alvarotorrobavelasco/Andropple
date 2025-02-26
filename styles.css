@@ -1,4 +1,3 @@
-/* Importar fuente personalizada */
 @font-face {
     font-family: 'Andreas';
     src: url('fonts/Andreas.ttf') format('truetype'); /* Ruta al archivo de fuente */
@@ -146,16 +145,71 @@ body {
     text-align: center;
     transition: transform 0.3s;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
+    z-index: 10000;
 }
 
 .service-card i {
     font-size: 3rem;
     color: #007BFF;
     margin-bottom: 1rem;
+}
+
+.brands-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 10001;
+    width: auto;
+    left: 20%;
+    top: 100%;
+    transform: translateX(-20%);
+    margin-top: 10px;
+}
+
+.brands-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 20%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+}
+
+.service-card:hover .brands-dropdown {
+    display: block;
+}
+
+.brands-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.brands-dropdown li {
+    padding: 8px 15px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.brands-dropdown li:hover {
+    background-color: #f5f5f5;
+}
+
+.brands-dropdown i {
+    margin-right: 10px;
 }
 
 /* Sección Contacto */
@@ -664,4 +718,59 @@ form button:hover {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+.brand-item {
+    position: relative;
+}
+
+.models-submenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 10002;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    width: 200px;
+}
+
+.brand-item:hover .models-submenu {
+    display: block;
+}
+
+.models-submenu ul {
+    display: block;
+    gap: 0;
+}
+
+.models-submenu li {
+    padding: 5px 10px;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+.models-submenu li:hover {
+    background-color: #f5f5f5;
+}
+
+/* Triángulo para el submenú */
+.models-submenu::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+}
+
+/* Estilo específico para el submenú de sobremesa */
+.brand-item:first-child .models-submenu {
+    width: 250px; /* Ancho especial para el menú de sobremesa */
 } 
